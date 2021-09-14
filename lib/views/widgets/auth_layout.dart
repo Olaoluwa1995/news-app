@@ -56,7 +56,6 @@ class AuthLayout extends StatelessWidget {
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60))
                   ),
                   child: SingleChildScrollView(
-                    // physics: NeverScrollableScrollPhysics(),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -102,7 +101,7 @@ class AuthLayout extends StatelessWidget {
                             ),
                             bottomRow,
                             SizedBox(
-                              height: size.height * 0.02,
+                              height: size.height * 0.09,
                             ),
                           ],
                         ),

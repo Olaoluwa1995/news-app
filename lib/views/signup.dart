@@ -112,7 +112,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
           horizontal: size.width * 0.05,
         ),
         child: SingleChildScrollView(
-          // physics: NeverScrollableScrollPhysics(),
           child: Form(
             key: _registerFormKey,
             child: Column(
