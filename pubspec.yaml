@@ -27,7 +27,7 @@ flutter:
     - assets/app_bg.webp
     - assets/google.png
     - assets/facebook.png
-    - assets/app_logo.jpeg
+    - assets/app_logo.png
 
 flutter_native_splash:
   image: "assets/app_logo.png"
