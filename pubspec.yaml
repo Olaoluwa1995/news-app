@@ -23,3 +23,5 @@ flutter:
 
   assets:
     - assets/app_bg.webp
+    - assets/google.png
+    - assets/facebook.png
