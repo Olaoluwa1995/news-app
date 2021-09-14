@@ -69,19 +69,16 @@ class _SignInScreenState extends State<SignInScreen> {
       return;
     }
     _loginFormKey.currentState!.save();
-    print(_loginData);
     _showLoader();
     http.Response response = await http.post(
-    Uri.parse('${AppApi.signinUrl}'),
-    body: json.encode(_loginData),
-    headers: {'Content-Type': 'application/json'},
+      Uri.parse('${AppApi.signinUrl}'),
+      body: json.encode(_loginData),
+      headers: {'Content-Type': 'application/json'},
     );
     final Map<String, dynamic> responseData = json.decode(response.body);
-    print(responseData);
     if(responseData.containsValue("Success!")) {
       Navigator.of(context).pop();
-      print('true');
-      // Navigator.of(context).pushReplacementNamed(routeName);
+      Navigator.of(context).pushReplacementNamed(Routes.NEWS_SCREEN_ROUTE);
     } else {
       Navigator.of(context).pop();
       _showErrorDialog(responseData['Success']);

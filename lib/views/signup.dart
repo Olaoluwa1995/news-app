@@ -79,7 +79,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return;
     }
     _registerFormKey.currentState!.save();
-    print(_registerData);
 
     if (_registerData['password'] !=
         _registerData['passwordConf']) {
@@ -87,14 +86,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
     } else {
       _showLoader();
       http.Response response = await http.post(
-      Uri.parse('${AppApi.signupUrl}'),
-      body: json.encode(_registerData),
-      headers: {'Content-Type': 'application/json'},
+        Uri.parse('${AppApi.signupUrl}'),
+        body: json.encode(_registerData),
+        headers: {'Content-Type': 'application/json'},
       );
       final Map<String, dynamic> responseData = json.decode(response.body);
       if(responseData.containsValue("You are regestered,You can login now.")) {
         Navigator.of(context).pop();
-        // Navigator.of(context).pushReplacementNamed(routeName);
+        Navigator.of(context).pushReplacementNamed(Routes.NEWS_SCREEN_ROUTE);
       } else {
         Navigator.of(context).pop();
         _showErrorDialog(responseData['Success']);
@@ -113,11 +112,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
           horizontal: size.width * 0.05,
         ),
         child: SingleChildScrollView(
-          physics: NeverScrollableScrollPhysics(),
+          // physics: NeverScrollableScrollPhysics(),
           child: Form(
             key: _registerFormKey,
             child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomInput(
                   hint: 'Dion',
