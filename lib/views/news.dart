@@ -97,7 +97,7 @@ class _NewsScreenState extends State<NewsScreen> {
                       right: size.width * 0.05,
                     ),
                     padding: EdgeInsets.all(15),
-                    height: size.height * 0.2,
+                    height: 160,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
