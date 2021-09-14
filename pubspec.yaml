@@ -14,6 +14,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   http: ^0.13.3
+  flutter_native_splash: ^1.2.3
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +27,8 @@ flutter:
     - assets/app_bg.webp
     - assets/google.png
     - assets/facebook.png
+    - assets/app_logo.jpeg
+
+flutter_native_splash:
+  image: "assets/app_logo.png"
+  color: "ffffff"
