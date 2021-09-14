@@ -30,7 +30,7 @@ class CustomInput extends StatelessWidget {
               Radius.circular(15),
             ),
             child: TextFormField(
-              cursorColor: Colors.white,
+              cursorColor: Colors.black,
               obscureText: obsecure,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(
@@ -39,7 +39,7 @@ class CustomInput extends StatelessWidget {
                 errorMaxLines: 1,
                 hintText: hint,
                 hintStyle: TextStyle(
-                    color: Colors.white, fontSize: 12),
+                    color: Colors.black54, fontSize: 12),
                 errorBorder: AppInput.errorBorder,
                 errorStyle: AppInput.errorStyle,
                 counterText: '',
@@ -49,7 +49,7 @@ class CustomInput extends StatelessWidget {
                 ),
                 focusedErrorBorder: AppInput.focusedBorder,
                 filled: true,
-                fillColor: Color(0xFFD2B48C),
+                fillColor: Colors.brown.shade200,
                 focusedBorder: AppInput.focusedBorder,
                 border: AppInput.border,
               ),

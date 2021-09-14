@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:news_app/constants/app-colors.dart';
+import 'package:news_app/views/widgets/line.dart';
 
 class AuthLayout extends StatelessWidget {
   AuthLayout({
@@ -20,6 +22,7 @@ class AuthLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         height: size.height,
         width: size.width,
@@ -49,12 +52,13 @@ class AuthLayout extends StatelessWidget {
                   height: size.height * 0.65,
                   width: size.width,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: AppColors.backgroundColor,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60))
                   ),
                   child: SingleChildScrollView(
                     // physics: NeverScrollableScrollPhysics(),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Padding(
                           padding: EdgeInsets.symmetric(vertical: size.height * 0.03),
@@ -112,22 +116,6 @@ class AuthLayout extends StatelessWidget {
           ),
         ),
       )
-    );
-  }
-}
-
-class Line extends StatelessWidget {
-  const Line({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Container(
-      height: 2,
-      width: size.width * 0.2,
-      color: Colors.grey.shade300
     );
   }
 }

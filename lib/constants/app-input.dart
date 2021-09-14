@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'app-colors.dart';
 
 class AppInput {
-  static const focusedBorder = OutlineInputBorder(
-    borderRadius: const BorderRadius.all(
+  static final focusedBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.all(
       Radius.circular(15),
     ),
     borderSide: BorderSide(
